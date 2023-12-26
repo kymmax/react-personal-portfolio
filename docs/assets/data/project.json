@@ -1,0 +1,395 @@
+[
+    {
+        "type": "TOP",
+        "project": [
+            {
+                "name": "first",
+                "img-scene": "first"
+            }
+        ]
+    },
+    {
+        "type": "FIX",
+        "project": [
+            {
+                "name": "FIX",
+                "img-scene": "FIX",
+                "url": "navi"
+            },
+            {
+                "name": "Github-flashCSS",
+                "url": "https://github.com/kymmax/flashCSS",
+                "img-scene": "Github-flashCSS",
+                "img-intro": ["Github-flashCSS-1"],
+                "award": []
+            }
+        ]
+    },
+    {
+        "type": "2023",
+        "project": [
+            {
+                "name": "2023",
+                "img-scene": "2023-year",
+                "url": "navi"
+            },
+            {
+                "name": "LEXUS-event",
+                "url": "http://211.72.175.163/personal/jason/2023-lexus/",
+                "img-scene": "2023-Lexus-event",
+                "img-intro": ["2023-Lexus-event-1"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-CICA",
+                "url": "https://www.lrp.com.tw/events/cicaserum2023/",
+                "img-scene": "2023-LRP-CICA",
+                "img-intro": ["2023-LRP-CICA-1"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-UV",
+                "url": "https://www.lrp.com.tw/events/uv2023/",
+                "img-scene": "2023-LRP-UV",
+                "img-intro": ["2023-LRP-UV-1"],
+                "award": []
+            },
+            {
+                "name": "國家地理頻道-natgeorun",
+                "url": "https://natgeorun.com.tw/",
+                "img-scene": "2023-Natgeorun",
+                "img-intro": ["2023-Natgeorun-1"],
+                "award": []
+            },
+            {
+                "name": "和泰Pay",
+                "url": "https://fla.com.tw/frontend/2023-hotaipay/",
+                "img-scene": "2023-Hotaipay",
+                "img-intro": ["2023-Hotaipay-1"],
+                "award": []
+            }
+        ]
+    },
+    {
+        "type": "2022",
+        "project": [
+            {
+                "name": "2022",
+                "img-scene": "2022-year",
+                "url": "navi"
+            },
+            {
+                "name": "味丹乾麵王-event",
+                "url": "https://2022vedannoodle.tw/",
+                "img-scene": "2022-Vedan-noodle",
+                "img-intro": ["2022-Vedan-noodle-1"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-POPUPSTORE",
+                "url": "https://www.lrp.com.tw/events/2022popupstore/",
+                "img-scene": "2022-LRP-POPUPSTORE",
+                "img-intro": ["2022-LRP-POPUPSTORE-1"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-CICA",
+                "url": "https://www.lrp.com.tw/events/cica2022/",
+                "img-scene": "2022-LRP-CICA",
+                "img-intro": ["2022-LRP-CICA-1"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-ACD",
+                "url": "http://211.72.175.163/personal/jason/2022-ACD-momo/momo/main.html",
+                "img-scene": "2022-LRP-ACD",
+                "img-intro": ["2022-LRP-ACD-1"],
+                "award": []
+            },
+            {
+                "name": "HYUNDAI-IONIQ",
+                "url": "https://www.hyundai-motor.com.tw/ioniq.html",
+                "img-scene": "2022-HYUNDAI-IONIQ",
+                "img-intro": ["2022-HYUNDAI-IONIQ-1"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-TOL",
+                "url": "https://www.lrp.com.tw/events/sensifluide2022/",
+                "img-scene": "2022-LRP-TOL",
+                "img-intro": ["2022-LRP-TOL-1"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-N10",
+                "url": "https://www.lrp.com.tw/events/niacinamide2022/",
+                "img-scene": "2022-LRP-N10",
+                "img-intro": ["2022-LRP-N10-1"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-EFFACLAR",
+                "url": "https://www.lrp.com.tw/events/effaclar2022/",
+                "img-scene": "2022-LRP-EFFACLAR",
+                "img-intro": ["2022-LRP-EFFACLAR-1"],
+                "award": []
+            },
+            {
+                "name": "HYUNDAI-VENUE-BW",
+                "url": "https://www.hyundai-motor.com.tw/venue-bw.html",
+                "img-scene": "2022-HYUNDAI-VENUE-BW",
+                "img-intro": ["2022-HYUNDAI-VENUE-BW-1"],
+                "award": []
+            },
+            {
+                "name": "HYUNDAI-eTry",
+                "url": "https://www.hyundai-motor.com.tw/hyundai-etry.html",
+                "img-scene": "2022-HYUNDAI-eTry",
+                "img-intro": ["2022-HYUNDAI-eTry-1"],
+                "award": []
+            },
+            {
+                "name": "ParticleJockey",
+                "url": "https://www.fla-g.com/ParticleJockey/",
+                "img-scene": "2022-ParticleJockey",
+                "img-intro": ["2022-ParticleJockey-1","2022-ParticleJockey-2","2022-ParticleJockey-3","2022-ParticleJockey-4"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-UV",
+                "url": "https://www.lrp.com.tw/events/uvclear2022/",
+                "img-scene": "2022-LRP-UV",
+                "img-intro": ["2022-LRP-UV-1","2022-LRP-UV-2"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-SENSI",
+                "url": "https://www.lrp.com.tw/events/sensi2022/",
+                "img-scene": "2022-LRP-SENSI",
+                "img-intro": ["2022-LRP-SENSI-1","2022-LRP-SENSI-2"],
+                "award": []
+            },
+            {
+                "name": "現代汽車-VENUE",
+                "url": "https://www.hyundai-motor.com.tw/venue-pink.html",
+                "img-scene": "2022-HYUNDAI-VENUE",
+                "img-intro": ["2022-HYUNDAI-VENUE-1","2022-HYUNDAI-VENUE-2"]
+            },
+            {
+                "name": "薇姿-M89",
+                "url": "https://www.vichy.com.tw/events/m89_2022/",
+                "img-scene": "2022-VHY",
+                "img-intro": ["2022-VHY-1","2022-VHY-2"],
+                "award": []
+            }
+        ]
+    },
+    {
+        "type": "2021",
+        "project": [
+            {
+                "name": "2021",
+                "img-scene": "2021-year",
+                "url": "navi"
+            },
+            {
+                "name": "理膚寶水-ACD",
+                "url": "http://211.72.175.163/personal/jason/2021-ACD-momo/main.html",
+                "img-scene": "2021-LRP-ACD",
+                "img-intro": ["2021-LRP-ACD-1","2021-LRP-ACD-2","2021-LRP-ACD-3"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-CICA-Q4",
+                "url": "https://www.lrp.com.tw/events/cica2021q4/",
+                "img-scene": "2021-LRP-CICA-Q4",
+                "img-intro": ["2021-LRP-CICA-Q4-1","2021-LRP-CICA-Q4-2"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-CICA",
+                "url": "https://www.lrp.com.tw/events/cica2021/",
+                "img-scene": "2021-LRP-CICA",
+                "img-intro": ["2021-LRP-CICA-1","2021-LRP-CICA-2","2021-LRP-CICA-3"],
+                "award": []
+            },
+            {
+                "name": "現代汽車-ELECTRIC",
+                "url": "https://www.hyundai-motor.com.tw/electric.html",
+                "img-scene": "2021-HYUNDAI-ELECTRIC",
+                "img-intro": ["2021-HYUNDAI-ELECTRIC-1","2021-HYUNDAI-ELECTRIC-2"],
+                "award": []
+            },
+            {
+                "name": "三菱汽車-AR",
+                "url": "https://www.mitsubishi-motors.com.tw/act/ARec/",
+                "img-scene": "2021-MITSUBISHI-AR",
+                "img-intro": ["2021-MITSUBISHI-AR-1","2021-MITSUBISHI-AR-2"],
+                "award": []
+            },
+            {
+                "name": "和泰集團-OFFICIAL",
+                "url": "https://www.hotaimember.com.tw/",
+                "img-scene": "2021-HOTAI",
+                "img-intro": ["2021-HOTAI-1","2021-HOTAI-2","2021-HOTAI-3","2021-HOTAI-4","2021-HOTAI-5"],
+                "award": []
+            }
+        ]
+    },
+    {
+        "type": "2020",
+        "project": [
+            {
+                "name": "2020",
+                "img-scene": "2020-year",
+                "url": "navi"
+            },
+            {
+                "name": "SYM-ONLINE-EXHIBITION",
+                "url": "https://exhibit.sym.com.tw/sym2020/",
+                "img-scene": "2020-SYM-ONLINE-EXHIBITION",
+                "img-intro": ["2020-SYM-ONLINE-EXHIBITION-1","2020-SYM-ONLINE-EXHIBITION-2","2020-SYM-ONLINE-EXHIBITION-3","2020-SYM-ONLINE-EXHIBITION-4","2020-SYM-ONLINE-EXHIBITION-5"],
+                "award": ["4A(2021) - 數位類 最佳科技應用創意獎 銅獎","4A(2021) - 數位類 最佳網站創意獎 銅獎","金手指(2021) - 应用类 / 技术应用奖 佳作","奇點獎(2021) - 最佳活動網站行銷獎 銅獎"]
+            },
+            {
+                "name": "悠遊付-OFFICIAL",
+                "url": "https://easywallet.easycard.com.tw/",
+                "img-scene": "2020-EASYWALLET",
+                "img-intro": ["2020-EASYWALLET-1","2020-EASYWALLET-2","2020-EASYWALLET-3","2020-EASYWALLET-4"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-EFFACLAR",
+                "url": "https://www.lrp.com.tw/events/effaclar2020/",
+                "img-scene": "2020-LRP-EFFACLAR",
+                "img-intro": ["2020-LRP-EFFACLAR-1","2020-LRP-EFFACLAR-2","2020-LRP-EFFACLAR-3","2020-LRP-EFFACLAR-4"],
+                "award": ["金手指(2020) - 互動裝置應用獎 佳作","金手指(2020) - 網站或APP創意獎 入圍","金像獎(2020) - 技術類最佳互動設計項 入圍"]
+            },
+            {
+                "name": "理膚寶水-SENSI",
+                "url": "https://www.lrp.com.tw/events/sensi2020/",
+                "img-scene": "2020-LRP-SENSI",
+                "img-intro": ["2020-LRP-SENSI-1","2020-LRP-SENSI-2"],
+                "award": []
+            },
+            {
+                "name": "FLA-IMOKYOUOK",
+                "url": "http://211.72.175.163/personal/jason/imokyouok/",
+                "img-scene": "2020-FLA-IMOKYOUOK",
+                "img-intro": ["2020-FLA-IMOKYOUOK-1","2020-FLA-IMOKYOUOK-2"],
+                "award": ["金手指(2020) - 用戶體驗(UX/UI)創意獎 入圍"]
+            },
+            {
+                "name": "雀巢-CNY",
+                "url": "http://newneswater.coder.com.tw/2021cny/index.html",
+                "img-scene": "2020-NEWNESWATER-CNY",
+                "img-intro": ["2020-NEWNESWATER-CNY-1"],
+                "award": []
+            },
+            {
+                "name": "KIPLINGxPACMAN-FILTER",
+                "url": "https://www.instagram.com/p/B8Qu6qLHjdV/",
+                "img-scene": "2020-KIPLINGxPACMAN",
+                "img-intro": ["2020-KIPLINGxPACMAN-1"],
+                "award": []
+            },
+            {
+                "name": "FETNET-FILTER",
+                "url": "https://www.instagram.com/p/CGqyJCjnvk-/?igshid=ok3nzqyfa1xs",
+                "img-scene": "2020-FETNET",
+                "img-intro": ["2020-FETNET-1","2020-FETNET-2"],
+                "award": []
+            }
+        ]
+    },
+    {
+        "type": "2019",
+        "project": [
+            {
+                "name": "2019",
+                "img-scene": "2019-year",
+                "url": "navi"
+            },
+            {
+                "name": "悠遊付-CONCEPT",
+                "url": "http://211.72.175.163/personal/jason/easycard/",
+                "img-scene": "2019-EASYWALLET",
+                "img-intro": ["2019-EASYWALLET-1","2019-EASYWALLET-2","2019-EASYWALLET-3","2019-EASYWALLET-4"],
+                "award": ["數位奇點獎(2020) - 最佳使用者體驗(UX)獎 銅獎","金手指(2020) - 用戶體驗(UX/UI)創意獎 佳作"]
+            },
+            {
+                "name": "理膚寶水-SENSI",
+                "url": "https://www.lrp.com.tw/events/sensi2020/",
+                "img-scene": "2019-LRP-SENSI",
+                "img-intro": ["2019-LRP-SENSI-1","2019-LRP-SENSI-2"],
+                "award": []
+            },
+            {
+                "name": "理膚寶水-EFFACLAR",
+                "url": "https://www.lrp.com.tw/events/effaclar2019/",
+                "img-scene": "2019-LRP-EFFACLAR",
+                "img-intro": ["2019-LRP-EFFACLAR-1","2019-LRP-EFFACLAR-2"],
+                "award": []
+            },
+            {
+                "name": "能恩水解-EVENT",
+                "url": "http://nesnan3.coder.com.tw/shshmember4/",
+                "img-scene": "2019-NESNAN",
+                "img-intro": ["2019-NESNAN-1","2019-NESNAN-2"],
+                "award": []
+            },
+            {
+                "name": "現代汽車-VELOSTER",
+                "url": "http://211.72.175.163/flaProject/hyundai/Veloster/index/",
+                "img-scene": "2019-HYUNDAI-VELOSTER",
+                "img-intro": ["2019-HYUNDAI-VELOSTER-1","2019-HYUNDAI-VELOSTER-2"],
+                "award": []
+            },
+            {
+                "name": "現代汽車-KONA",
+                "url": "https://www.hyundai-motor.com.tw/IRONMAN_KONA/",
+                "img-scene": "2019-HYUNDAI-KONA",
+                "img-intro": ["2019-HYUNDAI-KONA-1","2019-HYUNDAI-KONA-2"],
+                "award": []
+            }
+        ]
+    },
+    {
+        "type": "2018",
+        "project": [
+            {
+                "name": "2018",
+                "img-scene": "2018-year",
+                "url": "navi"
+            },
+            {
+                "name": "KYM-PORTFOLIO",
+                "url": "http://www.kymweb.design/Design.html",
+                "img-scene": "2018-KYM-PORTFOLIO",
+                "img-intro": ["2018-KYM-PORTFOLIO-1","2018-KYM-PORTFOLIO-2"],
+                "award": []
+            },
+            {
+                "name": "KYM-CATCH",
+                "url": "http://www.kymweb.design/catch.html",
+                "img-scene": "2018-KYM-CATCH",
+                "img-intro": ["2018-KYM-CATCH-1","2018-KYM-CATCH-2"],
+                "award": []
+            },
+            {
+                "name": "KYM-PARALLAX",
+                "url": "http://www.kymweb.design/parallax.html",
+                "img-scene": "2018-KYM-PARALLAX",
+                "img-intro": ["2018-KYM-PARALLAX-1","2018-KYM-PARALLAX-2"],
+                "award": []
+            },
+            {
+                "name": "KYM-RESUME",
+                "url": "http://www.kymweb.design/resume.html",
+                "img-scene": "2018-KYM-RESUME",
+                "img-intro": ["2018-KYM-RESUME-1","2018-KYM-RESUME-2"],
+                "award": []
+            }
+        ]
+    }
+]

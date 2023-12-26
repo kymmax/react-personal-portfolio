@@ -1,0 +1,328 @@
+@import "config/function";
+@import "config/variables";
+@import "config/normalize";
+@import "config/mixin";
+@import "config/media";
+@import "config/color";
+@import "config/grid";
+@import "config/form";
+
+@import 'icomoon/style';
+
+
+@import 'config/animation';
+
+
+@import 'module/_nav';
+@import 'module/_mouse';
+@import 'module/_scrollbar';
+// @import 'module/_loading';
+
+/////////////////////////////////////////////////////////////
+
+// 
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    // user-select: none;
+}
+
+p,li{
+    letter-spacing: 0.1em;
+    color: var(--scene_white);
+    transition: all 1s;
+}
+
+i{
+    color: var(--scene_white);
+    transition: all 1s;
+}
+
+a{
+    transition: all 1s;
+}
+
+
+// 
+html,
+body {
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+}
+
+body{
+    --scene_white: #ffffff;
+    --rgb_white: 255,255,255;
+    --scene_black: #1a1a1a;
+    --rgb_black: 26,26,26;
+    &.scene-white{
+        --scene_white: #1a1a1a;
+        --rgb_white: 26,26,26;
+        --scene_black: #ffffff;
+        --rgb_black: 255,255,255;
+        .nav-logo{
+            filter: invert(1);
+        }
+    }
+}
+
+
+
+// GUI
+.dg {
+    user-select: none;
+}
+
+
+#project-module{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 4vw;
+    background-color: rgba(white,.5);
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    z-index: 99;
+    transition: all 1s;
+    &.active{
+        opacity: 1;
+        pointer-events: initial;
+    }
+    @media (min-width: $g-lg){
+        width: 45%;
+        backdrop-filter: blur(10px);
+        background-color: rgba(white,.25);
+    }
+    .img-block{
+        position: relative;
+        display: flex;
+        border: 1px solid gray;
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+        &::before{
+            content: 'Loading...';
+            color: gray;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            // width: 50px;
+            // height: 50px;
+            // border: 2px solid transparent;
+            // border-top: 2px solid var(--scene_white);
+            // border-right: 2px solid var(--scene_white);
+            // border-radius: 50%;
+        }
+    }
+    img {
+        position: relative;
+        // max-width: 100%;
+        width: 100%;
+        height: intrinsic;
+        // aspect-ratio: 16 / 9;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+    .project-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+    }
+    .project-name{
+        font-weight: 500;
+        color: var(--scene_white);
+        font-size: 30px;
+        text-align: center;
+        // @media (min-width: $g-lg){
+        //     font-size: 30px;
+        // }
+    }
+    .project-date{
+        color: var(--scene_white);
+        font-weight: 300;
+        font-size: 16px;
+        text-align: center;
+        // @media (min-width: $g-lg){
+        //     font-size: 16px;
+        // }
+    }
+    .project-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+    .award-block{
+        font-size: 18px;
+        li{
+            margin-bottom: 5px;
+            background-color: var(--scene_black);
+            padding: 0 5px;
+        }
+        i{
+            margin-right: 5px;
+        }
+        @media (min-width: $g-lg){
+            font-size: 16px;
+        }
+    }
+    .project-link{
+        display: block;
+        text-align: center;
+        background-color: var(--scene_black);
+        font-size: 24px;
+        color: var(--scene_white);
+        line-height: 60px;
+        letter-spacing: 0.2em;
+        transition: all 1s;
+        @media (min-width: $g-lg){
+            font-size: 20px;
+        }
+    }
+}
+
+#project-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 6vw;
+    font-weight: bold;
+    color:  var(--scene_white);
+    padding: 1vw;
+    transition: all 1s;
+    z-index: 1;
+    @media (min-width: $g-lg){
+        top: 50%;
+        right: 0%;
+        transform: translate(0,-50%);
+        font-size: 2vw;
+    }
+}
+.project-close{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 55vw;
+    height: 100%;
+}
+
+@keyframes rotate360-center {
+    100% {transform: translate(-50%,-50%) rotate(360deg);}
+}
+
+#personal-block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+    &.active{
+        opacity: 1;
+        pointer-events: initial;
+        .person-name{
+            letter-spacing: 0.2em;
+        }
+        .person-position{
+            letter-spacing: 0.1em;
+        }
+        .person-mail{
+            letter-spacing: 0.1em;
+        }
+    }
+    [class^="person"]{
+        color: var(--scene_white);
+        white-space: nowrap;
+    }
+    .person-name{
+        font-weight: bold;
+        letter-spacing: 0.5em;
+        font-size: 34px;
+    }
+    .person-position{
+        font-weight: 300;
+        padding: 20px 0;
+        font-size: 18px;
+        letter-spacing: 0.5em;
+    }
+    .person-mail{
+        font-weight: 300;
+        font-size: 18px;
+        letter-spacing: 0.5em;
+    }
+    @media (min-width: $g-lg){
+        .person-name{
+            font-size: 80px;
+        }
+        .person-position{
+            font-size: 30px;
+        }
+        .person-mail{
+            font-size: 24px;
+        }
+    }
+}
+
+
+
+
+input[type=range] {
+    -webkit-appearance: none; /* We first need to hide the slider, so we're sure only our custom CSS is being used. */
+    width: 100%;
+    height: 40px;
+    background: transparent !important;
+  }
+  
+  /* -webkit is used by Google Chrome and Apple Safari browsers */
+  
+  /* -webkit-slider-runnable-track represents the "track" (the groove in which the indicator slides) */
+  input[type=range]::-webkit-slider-runnable-track {
+    background: transparent !important; /* In our case we want an orange background of the bar. */
+    transform: translate(0,50%);
+  }
+  
+  /* -webkit-slider-thumb represents the "thumb" that the user can move within the "groove" of an <input> of type="range" to alter its numerical value. */
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 10px; /* We want a nice, big thumb to select. */
+    width: 10px; /* We want a nice, big thumb to select. */
+    background: var(--scene_white); /* Give the thumb a recognizable GravityWP light blue background. */
+    transform: translate(0,-50%) rotate(45deg);
+    border: 2px solid var(--scene_black);
+    box-shadow: 0 0 0 2px var(--scene_white);
+    transition: all 1s;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: transparent !important; /* What color should the bar have while dragging the thumb to another place in the slider. */
+  }
+  
+  /* -moz is used by the Mozilla Firefox browser */
+  
+  input[type=range]::-moz-range-track {
+    height: 16px;
+    width: 100%;
+    background: #f26522;
+    cursor: pointer;
+    border: 0.5px solid #000000;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    height: 36px;
+    width: 24px;
+    border-radius: 5px;
+    background: #ddecf5;
+    cursor: pointer;
+    border: 0.5px solid #000000;
+  }

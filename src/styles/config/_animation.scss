@@ -1,0 +1,146 @@
+
+[data-ani]{
+    opacity: 0;
+}
+// 
+.ANI-active{
+    opacity: 1 !important; 
+}
+// 
+.ANI-fadeIn{
+    animation: ANI-fadeIn 1s both;
+}
+@keyframes ANI-fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.ANI-fadeInLeft{
+    animation: ANI-fadeInLeft 1s both;
+}
+@keyframes ANI-fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        -ms-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+
+.ANI-fadeInRight{
+    animation: ANI-fadeInRight 1s both;
+}
+@keyframes ANI-fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        -ms-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+
+.ANI-fadeInUp{
+    animation: ANI-fadeInUp 1s both;
+}
+@keyframes ANI-fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        -ms-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+
+.ANI-fadeInDown{
+    animation: ANI-fadeInDown 1s both;
+}
+@keyframes ANI-fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        -ms-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+
+.ANI-blurIn{
+    animation: ANI-blurIn 2s both;
+}
+@keyframes ANI-blurIn {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.ANI-rotateIn{
+    animation: ANI-rotateIn 2s both;
+}
+@keyframes ANI-rotateIn {
+    0% {
+        opacity: 0;
+        transform: rotate(90deg) scale(0.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.ANI-bounce{
+    animation: ANI-bounce 1s both;
+}
+@keyframes ANI-bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

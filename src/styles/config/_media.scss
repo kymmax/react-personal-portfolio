@@ -1,0 +1,13 @@
+/*--------- Media ---------*/
+// Extra small devices (portrait phones, <=575px)
+$g-sm: 576px !default; // Small devices (landscape phones, >=576 & <=767)
+$g-md: 768px !default; // Medium devices (tablets, >=768 & <=991)
+$g-lg: 960px !default; // Large devices (desktops, >=992 & <=1199)
+$g-xl: 1280px !default; // Extra large devices (large desktops, >=1200)
+
+@media (min-width: $g-sm){}
+@media (min-width:  $g-md) {}
+@media (min-width: $g-lg) {}
+@media (min-width: $g-xl) {}
+@media (orientation: landscape) {}
+

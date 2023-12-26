@@ -1,0 +1,40 @@
+
+body{
+    --before-content: '';
+}
+
+#cursor-mouse {
+    // --before-content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    // border: 2px solid rgba(#03a0e9, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: rgba(white,1);
+    mix-blend-mode: difference;
+    z-index: 999999999999;
+    opacity: 0;
+    overflow: hidden;
+    &.init {
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+        &::before{
+            content: var(--before-content);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 12px;
+            // color: $light;
+        }
+    }
+    &.active {
+        width: 60px;
+        height: 60px;
+        mix-blend-mode: initial;
+    }
+}

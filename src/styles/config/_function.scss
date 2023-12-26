@@ -1,0 +1,39 @@
+/*--------- Breakpoints ---------*/
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+    @if $min {
+        @media (min-width: $min) {
+            @content;
+        }
+    }
+    @else {
+        @content;
+    }
+}
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+    $min: map-get($breakpoints, $name);
+    @return if($min !=0, $min, null);
+}
+
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+    @return if(breakpoint-min($name, $breakpoints)==null, "", "-#{$name}");
+}
+
+// ------ 自定義FontAwesome
+$icon: "Font Awesome 5 Free";
+$icon_2: icomoon;
+
+@mixin fa-icon($num, $font-face) {
+    content: $num;
+    font-family: $font-face;
+
+    @if $font-face==$icon {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    @else if $font-face==$icon_2 {}
+}

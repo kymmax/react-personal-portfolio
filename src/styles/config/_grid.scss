@@ -1,0 +1,67 @@
+/*--------- Wrapper ---------*/
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*--------- Container ---------*/
+.container {
+  // max-width: 1280px;
+  // margin: 0 auto;
+  // border: 1px solid red;
+  padding: 0 5vw;
+  overflow: hidden;
+}
+
+.full-fix{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // @include opacity-0;
+  // pointer-events: none;
+  // transition: all 0.5s;
+  &.active {
+      // @include opacity-1;
+      // pointer-events: initial;
+  }
+}
+
+/*--------- Content ---------*/
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.content-y-center{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  // &.space-r{
+  //   right: 10vw;
+  // }
+
+  // @media (min-width: $g-lg){
+  //   &.space-r{
+  //     right: 6.25vw;
+  //   }
+  // }
+}
+
+/*--------- Row ---------*/
+.row {
+  display: flex;
+  margin: 0;
+}
+
+
+
+
+
+

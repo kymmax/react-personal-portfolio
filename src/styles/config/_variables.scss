@@ -1,0 +1,41 @@
+/*--------- Layout Set ---------*/
+$pc-width: 1920px;
+$pc-height: 900px;
+$pad-width: 768px;
+$mb-width: 960px;
+$mb-height: null;
+
+/*--------- Ratio Set ---------*/
+$pad-768: 100vw / $mb-width;
+$mb-960-vw: 100vw / $mb-width;
+$pc-1280-vw: 1 * (100vw / $pc-width);
+$pc-1280-vh: (1 * (100vh / $pc-height));
+
+@function fixVH($px){
+  $result:  $px / $pc-height;
+  @return calc(var(--vh, 1vh) * 100 * #{$result} );
+}
+
+
+
+
+/*--------- Font Base Set ---------*/
+$base-font-size: 16px;
+$base-line-height: 1;
+$base-font-weight: 400;
+
+/*--------- Font Family ---------*/
+$font-family: "Noto Sans TC", "微軟正黑體", Microsoft JhengHei, PingFang T, Arial, sans-serif;
+
+
+
+/*--------- Font Size ---------*/
+html,body{
+  font-size: $base-font-size;
+  font-family: $font-family;
+  color: black;
+}
+
+a{
+  color: black;
+}

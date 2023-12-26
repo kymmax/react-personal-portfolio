@@ -1,0 +1,85 @@
+form {
+    &.form-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+// 選擇歷史紀錄後樣式
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: none !important;
+    /*淡淡的白*/
+    transition: background-color 5000s ease-in-out 0s !important;
+    /*透明*/
+    -webkit-text-fill-color: #fff; /*字體顏色*/
+}
+
+// 點擊特效
+input,
+select {
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        background-color: black;
+    }
+}
+
+
+
+.wrapper input{
+    display: block;
+    position: relative;
+    width: 100%;
+    font-weight: 300;
+    font-size: 4.375vw;
+    letter-spacing: 0.1em;
+    border: 1vw solid white;
+    color: white;
+    background-color: transparent;
+    padding: 3vw;
+    &.list-type{
+        width: 28.5vw;
+        height: 7vw;
+        margin-left: 1.04vw;
+        padding: 1vw 1.5vw;
+        font-size: 3vw;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+    &::placeholder {
+        color: rgb(125, 125, 125);
+    }
+    @media (min-width: $g-lg){
+        font-size: 1.875vw;
+        border: .52vw solid white;
+        padding: .5vw;
+        &.list-type{
+            width: 15.625vw;
+            height: 3.9vw;
+            font-size: 1.875vw;
+            padding: .5vw;
+        }
+    }
+}
+
+// text
+.form-state{
+    color: red;
+    margin-bottom: 0.5rem;
+    white-space: pre-line;
+}
+.form-descript {
+    font-size: 0.875rem;
+    color: gray;
+    letter-spacing: 0.1em;
+    margin-top: 0.75rem;
+}
+
+
+
+

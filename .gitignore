@@ -1,5 +1,6 @@
 node_modules
 # dist
+docs
 stats.json
 .DS_Store
 package-lock.json

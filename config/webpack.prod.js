@@ -12,7 +12,7 @@ module.exports = merge(common, {
   output: {
     path: paths.build,
     filename: 'js/[name].[contenthash].bundle.js',
-    publicPath: '/',
+    publicPath: '/react-personal-portfolio/',
   },
   plugins: [
     new Dotenv({

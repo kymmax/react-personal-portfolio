@@ -1,0 +1,104 @@
+<!doctype html><html lang="zh-tw"><head><title>JASON KUO | WEBSITE PORTFOLIO</title><meta content="zh-tw" http-equiv="Content-Language"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,user-scalable=0"><meta http-equiv="X-UA-Compatible" content="IE=EDGE"><meta charset="UTF-8"><meta name="keywords" content="portfolio, kym, front-end, web, developer, three.js, jason kuo"><meta name="description" content="JASON KUO | WEBSITE PORTFOLIO"><link rel="shortcut icon" href="assets/resource/logo.png"><meta property="og:url" content="http://kymweb.design/"><meta property="og:type" content="website"><meta property="og:title" content="JASON KUO | WEBSITE PORTFOLIO"><meta property="og:site_name" content="JASON KUO | WEBSITE PORTFOLIO"><meta property="og:description" content="JASON KUO | WEBSITE PORTFOLIO"><meta property="og:image" content="http://kymweb.design/assets/images/meta.png"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-DES8J67J4L"></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-DES8J67J4L');
+        
+        // 
+
+        function GA( EVENT_TYPE, EVENT_NAME ){
+            gtag('event', 'KYM-PORTFOLIO' + '-' + EVENT_TYPE + '-' + EVENT_NAME);
+            console.log(
+                '%c %s', 'background: green; color: white;',
+                "GA: " + 'KYM-PORTFOLIO' + "," + EVENT_TYPE + "," + EVENT_NAME
+            );
+
+        }</script><style>html,body{
+            width: 100%;
+            height: 100%;
+            background: black;
+            margin: 0;
+            overflow: hidden;
+        }
+        #root{
+            width: 100%;
+            height: 100%;
+        }
+        #loading {
+            position: fixed;
+            inset: 0;
+            display: grid;
+            place-content: center;
+            background-color: black;
+            color: white;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 1s;
+        }
+        #loading.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #loading::before{
+            /* content: 'PORTFOLIO'; */
+            content: 'REACT';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #1c1c1c;
+            font-size: 10vw;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            transition: all 1s;
+        }
+        #loading p{
+            position: relative;
+            letter-spacing: 5em;
+            font-size: 2vw;
+            font-weight: 300;
+            padding-top: 1vw;
+            transition: all 1s;
+        }
+        #loading p::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 1vw;
+            height: 25vw;
+            border-radius: 50%;
+            background-color: white;
+            mix-blend-mode: soft-light;
+            opacity: 0;
+            transition: 1s;
+        }
+        #loading.active p{
+            letter-spacing: 1em;
+        }
+        #loading.active p::before{
+            animation: loading 2s infinite linear;
+        }
+        @keyframes loading {
+            0%{
+                width: 1vw;
+                height: 25vw;
+                opacity: 0;
+            }
+            50%{
+                width: 50vw;
+                height: 25vw;
+                opacity: 1;
+            }
+            100%{
+                width: 100vw;
+                height: 50vw;
+                opacity: 0;
+            }
+        }
+        #three-scene{
+            width: 100%;
+            height: 100%;
+        }</style><script defer="defer" src="/js/index.610c3d1848f48e6564f5.bundle.js"></script><link href="/styles/index.abe4708d7b24857e536f.css" rel="stylesheet"></head><body><div id="root"></div></body></html>

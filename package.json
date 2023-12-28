@@ -8,11 +8,11 @@
     "reactjs",
     "webpack",
     "boilerplate",
-    "tailwind"
+    "three"
   ],
   "license": "MIT",
   "name": "jasonkuo-website-portfolio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JASON KUO | WEBSITE PORTFOLIO",
   "dependencies": {
     "@react-three/drei": "^9.89.0",
@@ -20,6 +20,7 @@
     "@react-three/postprocessing": "^2.15.11",
     "@reduxjs/toolkit": "^2.0.1",
     "glob": "^10.3.10",
+    "gsap": "^3.12.4",
     "html-flash-css": "^2.0.0-beta",
     "jquery": "^3.7.1",
     "jquery.scrollbar": "^0.2.11",

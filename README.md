@@ -1,71 +1,37 @@
-# unmaintained
-I am not more maintain this project actively for different reasons. One is, that with Vite we have a nicer way to handle different aspects, other is time.
-But I check and can accept pull requests.
 
-### Visit my [Job Board for React Jobs](https://reactjsjob.com)
+# JASON KUO | WEBSITE PORTFOLIO
 
+Welcome to visit my personal portfolio website!
 
-# react-webpack-6-tailwind-2
+[Website Demo](https://kymmax.github.io/react-personal-portfolio/)
 
-React 17 Boilerplate with React 17, Webpack 6, Tailwind 2, HMR, using babel, Jest unit testing, sass, with a hot dev server and an optimized production build
-
-[Demo](https://dreamy-shirley-041c74.netlify.app/)
-
-Maintained by [Altafino - Full-Stack Go/JS Development](https://altafino.com)
-
-## Last Changes (the newest first):
-
-- added full support for unit testing (with file mocks) using Jest
-- added SVGR as a webpack loader to import your SVG directly as a React Component.
-- added build-staging script. same as build but using .env.staging
-- added dotenv-webpack to handle process.env.VARS
-- added Prettier
-- added react-refresh-webpack-plugin for HMR
-
-## Installation
-
-```
-git clone https://github.com/altafino/react-webpack-5-tailwind-2.git
-cd react-webpack-5-tailwind-2
-yarn / npm i
-```
-
-To use it for your own project the easiest way is to use the green Template Button on top right of this repo on Github.
-
-## Usage
 
 ### Development server
 
 ```bash
-yarn start / npm start
+npm start
 ```
 
-You can view the development server at `localhost:3000`.
-(change port in ./config/webpack.dev.js)
-
-### Unit Test
-
-```bash
- yarn test / npm test
-```
 
 ### Production build
 
 ```bash
- yarn build / npm run build
+npm run build
 ```
 
 ## Features
 
-- [React 17](https://reactjs.org/)
-- [Webpack 6](https://webpack.js.org/)
-- [Tailwind 2](https://tailwindcss.com)
-- [Jest 27](http://jestjs.io/)
-- [PostCss](https://postcss.org/)
-- [Babel](https://babeljs.io/)
+- [React 18.2.0](https://reactjs.org/)
+- [React Router 6.17.0](https://reactrouter.com/en/main)
+- [Redux 9.0.1](https://react-redux.js.org/)
+- [Webpack 5.73.0](https://webpack.js.org/)
+- [PostCss 8.4.14](https://postcss.org/)
+- [Babel 7.18.5](https://babeljs.io/)
 - [Sass](https://sass-lang.com/)
 - [Eslint](https://eslint.org/)
-- [Husky](https://github.com/typicode/husky) ( tks [@rubinj30](https://github.com/rubinj30) )
+- [THREE.js](https://threejs.org/)
+- [THREE Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
+- [GSAP](https://gsap.com/)
 
 ## Dependencies
 
@@ -82,12 +48,6 @@ You can view the development server at `localhost:3000`.
 - [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties directly on a class (an example Babel config)
 - [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
 
-### Jest
-
-- [`jest`](https://jestjs.io/) - Delightful JavaScript Testing
-- [`@testing-library/jest-dom`](https://github.com/testing-library/jest-dom#readme) - Custom jest matchers to test the state of the DOM
-- [`@testing-library/react`](https://testing-library.com/docs/react-testing-library/intro/) - Simple and complete React DOM testing utilities
-- [`@testing-library/user-event`](https://github.com/testing-library/user-event#readme) - Fire events the same way the user does
 
 ### Loaders
 
@@ -120,3 +80,8 @@ You can view the development server at `localhost:3000`.
 - [`dotenv-webpack`](https://github.com/mrsteele/dotenv-webpack) - Supports dotenv and other environment variables
 - [`@svgr/webpack`](https://github.com/mrsteele/dotenv-webpack) - SVGR can be used as a webpack loader, this way you can import your SVG directly as a React Component.
 - [`babel-jest`](https://www.npmjs.com/package/babel-jest) - Babel jest plugin for transforimg `.js` and `.jsx` files
+- [`three`](https://github.com/mrdoob/three.js/tree/master) - JavaScript 3D library.
+- [`@react-three/fiber`](https://github.com/pmndrs/react-three-fiber) - react-three-fiber is a React renderer for threejs.
+- [`@react-three/drei`](https://github.com/pmndrs/drei) - THREE useful helpers, this is an eco system in itself.
+- [`@react-three/postprocessing`](https://github.com/pmndrs/react-postprocessing) -  THREE post-processing effects.
+- [`gsap`](https://github.com/greensock/GSAP) -  A framework-agnostic JavaScript animation library 

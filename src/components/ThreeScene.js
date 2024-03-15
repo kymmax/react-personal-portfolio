@@ -379,8 +379,8 @@ const ThreeScene = () => {
                 <FogCustom />
                 {/* Helper */}
                 <OrbitControls enablePan={false} enableZoom={false} enableRotate={false} enableDamping={true} dampingFactor={.05} />
-                <axesHelper args={[5]} />
-                <Stats />
+                {/* <axesHelper args={[5]} /> */}
+                {/* <Stats /> */}
                 {/* Light */}
                 <ambientLight color={0xffffff} intensity={1.5} />
                 {/* Environment */}

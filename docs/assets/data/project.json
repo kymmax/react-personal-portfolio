@@ -9,11 +9,11 @@
         ]
     },
     {
-        "type": "FIX",
+        "type": "SIDE",
         "project": [
             {
-                "name": "FIX",
-                "img-scene": "FIX",
+                "name": "SIDE",
+                "img-scene": "SIDE",
                 "url": "navi"
             },
             {
@@ -21,6 +21,13 @@
                 "url": "https://github.com/kymmax/flashCSS",
                 "img-scene": "Github-flashCSS",
                 "img-intro": ["Github-flashCSS-1"],
+                "award": []
+            },
+            {
+                "name": "ParticleJockey",
+                "url": "https://www.fla-g.com/ParticleJockey/",
+                "img-scene": "2022-ParticleJockey",
+                "img-intro": ["2022-ParticleJockey-1","2022-ParticleJockey-2","2022-ParticleJockey-3","2022-ParticleJockey-4"],
                 "award": []
             }
         ]
@@ -32,6 +39,20 @@
                 "name": "2023",
                 "img-scene": "2023-year",
                 "url": "navi"
+            },
+            {
+                "name": "LinePay-旅展活動",
+                "url": "https://web-tw-pay.line.me/static/mkt/2023-linepay/index-1.html",
+                "img-scene": "2023-Linepay-travel",
+                "img-intro": ["2023-Linepay-travel-1"],
+                "award": []
+            },
+            {
+                "name": "現代汽車-VENUE-espresso",
+                "url": "https://www.hyundai-motor.com.tw/venue-espresso.html",
+                "img-scene": "2023-HYUNDAI-VENUE-expresso",
+                "img-intro": ["2023-HYUNDAI-VENUE-expresso-1"],
+                "award": []
             },
             {
                 "name": "LEXUS-event",
@@ -56,7 +77,7 @@
             },
             {
                 "name": "國家地理頻道-natgeorun",
-                "url": "https://natgeorun.com.tw/",
+                "url": "http://211.72.175.163/personal/jason/2023-natgeorun/",
                 "img-scene": "2023-Natgeorun",
                 "img-intro": ["2023-Natgeorun-1"],
                 "award": []
@@ -146,13 +167,6 @@
                 "url": "https://www.hyundai-motor.com.tw/hyundai-etry.html",
                 "img-scene": "2022-HYUNDAI-eTry",
                 "img-intro": ["2022-HYUNDAI-eTry-1"],
-                "award": []
-            },
-            {
-                "name": "ParticleJockey",
-                "url": "https://www.fla-g.com/ParticleJockey/",
-                "img-scene": "2022-ParticleJockey",
-                "img-intro": ["2022-ParticleJockey-1","2022-ParticleJockey-2","2022-ParticleJockey-3","2022-ParticleJockey-4"],
                 "award": []
             },
             {
@@ -246,7 +260,7 @@
             },
             {
                 "name": "SYM-ONLINE-EXHIBITION",
-                "url": "https://exhibit.sym.com.tw/sym2020/",
+                "url": "http://211.72.175.163/personal/jason/sym/dist/",
                 "img-scene": "2020-SYM-ONLINE-EXHIBITION",
                 "img-intro": ["2020-SYM-ONLINE-EXHIBITION-1","2020-SYM-ONLINE-EXHIBITION-2","2020-SYM-ONLINE-EXHIBITION-3","2020-SYM-ONLINE-EXHIBITION-4","2020-SYM-ONLINE-EXHIBITION-5"],
                 "award": ["4A(2021) - 數位類 最佳科技應用創意獎 銅獎","4A(2021) - 數位類 最佳網站創意獎 銅獎","金手指(2021) - 应用类 / 技术应用奖 佳作","奇點獎(2021) - 最佳活動網站行銷獎 銅獎"]

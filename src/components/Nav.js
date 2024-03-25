@@ -148,6 +148,7 @@ const Nav = ({handleHelixRotate}) => {
                 break;
             case "PERSONAL":
                 handleActiveClassToRefs("remove",refDate,refProgressBlock)
+                handleActiveClassToRefs("add",refLogo,refCopyright,refPerson,refUtility)
                 break;
             default:
                 break;

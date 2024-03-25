@@ -17,6 +17,13 @@
                 "url": "navi"
             },
             {
+                "name": "Github-luma",
+                "url": "https://github.com/kymmax/react-three-fiber-luma",
+                "img-scene": "Github-luma",
+                "img-intro": ["Github-luma-1","Github-luma-2"],
+                "award": []
+            },
+            {
                 "name": "Github-flashCSS",
                 "url": "https://github.com/kymmax/flashCSS",
                 "img-scene": "Github-flashCSS",
@@ -347,7 +354,7 @@
             },
             {
                 "name": "能恩水解-EVENT",
-                "url": "http://nesnan3.coder.com.tw/shshmember4/",
+                "url": "http://211.72.175.163/personal/jason/nestlebaby/dist/",
                 "img-scene": "2019-NESNAN",
                 "img-intro": ["2019-NESNAN-1","2019-NESNAN-2"],
                 "award": []

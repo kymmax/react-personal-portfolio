@@ -1,15 +1,15 @@
 // React
 import { useFrame, useLoader } from "@react-three/fiber";
-import { useRef } from "react";
+import { memo, useRef } from "react";
 
 // Plugin THREE.js
 import * as THREE from "three";
 
 
-const BgSphere = (props) => {
+const BgSphere = memo((props) => {
     const ref = useRef();
     const texture = useLoader(THREE.TextureLoader, './assets/resource/scene.jpg');
-
+    
     useFrame((state, delta) => {
         ref.current.rotation.y += .001;
     })
@@ -32,6 +32,6 @@ const BgSphere = (props) => {
             {props.children}
         </mesh>
     )
-}
+})
 
 export default BgSphere;

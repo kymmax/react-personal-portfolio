@@ -1,9 +1,10 @@
-// React
+// Redux
 import { createSlice } from "@reduxjs/toolkit";
 
 
 // Slice Part
 const initialState = {
+    test: null,
     status: "INIT", // 網頁整體狀態
     scene: null,  // OBJ 整體場景
     helix: null,  // OBJ 螺旋結構

@@ -19,8 +19,8 @@ const setMouseStyle = () => {
 
         requestAnimationFrame(() => {
             cursor.style.cssText = `
-          transition: transform ${cursor.delayTime}s ease-out, width 0.5s, height 0.5s, opacity 0.5s, background-color 0.5s;
-          transform: translate3d(${px}px, ${py}px, 0) translate(-50%, -50%);
+            transition: transform ${cursor.delayTime}s ease-out, width 0.5s, height 0.5s, opacity 0.5s, background-color 0.5s;
+            transform: translate3d(${px}px, ${py}px, 0) translate(-50%, -50%);
         `;
 
             if (!cursor.moveTrigger) {
@@ -31,6 +31,7 @@ const setMouseStyle = () => {
         });
     }
 
+    // Enter
     const mouseenter = (e) => {
         let content = e.target.getAttribute('data-cursor');
         cursor.classList.add("active");
@@ -38,6 +39,7 @@ const setMouseStyle = () => {
         document.body.style.setProperty('--before-content', content ? `"${content}"` : '"CLICK"');
     }
 
+    // Leave
     const mouseleave = () => {
         cursor.classList.remove("active");
         cursor.content = '';
@@ -55,6 +57,7 @@ const setMouseStyle = () => {
         targetEvent(element, "add");
     })
 
+    // Observe Element
     cursor.observeGroup = [];
     const observer = new MutationObserver(function (mutations) {
         mutations.forEach(function (mutation) {
@@ -62,15 +65,15 @@ const setMouseStyle = () => {
                 // check new element added?
                 for (let addedNode of mutation.addedNodes) {
                     if (addedNode.nodeType === Node.ELEMENT_NODE && !cursor.excludedTags.test(addedNode.tagName)) {
-
+                        
                         if (['A', 'BUTTON'].includes(addedNode.tagName)) {
                             targetEvent(addedNode, "add");
-                            cursor.observeGroup.push(addedNode)
+                            // cursor.observeGroup.push(addedNode)
                         }
 
                         addedNode.querySelectorAll("a, button").forEach((childNode) => {
                             targetEvent(childNode, "add");
-                            cursor.observeGroup.push(childNode)
+                            // cursor.observeGroup.push(childNode)
                         })
                     }
                 }
@@ -78,7 +81,7 @@ const setMouseStyle = () => {
         });
     });
 
-    // detect start
+    // Observe Start
     observer.observe(document.body, { childList: true, subtree: true });
 
     return () => {

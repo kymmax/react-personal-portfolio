@@ -17,7 +17,7 @@ import imgLogo from './../assets/resource/logo.png';
 import helixPara from '../assets/data/helixPara';
 
 
-const Nav = ({handleHelixRotate}) => {
+const Nav = () => {
 
     const navigate = useNavigate();
     // 
@@ -30,19 +30,17 @@ const Nav = ({handleHelixRotate}) => {
     const refDate = useRef();
     const refProgress = useRef();
     const refProgressBlock = useRef();
-    // 
+    // Redux Store
     const dispatch = useDispatch();
-    const data = useSelector((state) => state.data.data);
-    const dataLength = useSelector((state) => state.data.length);
-    // const planeCurrent = useSelector((state) => state.three.planeCurrent);
+    const { data, length: dataLength} = useSelector((state) => state.data);
     const three = useSelector((state) => state.three);    
-    // 
+    // Get URL Para
     const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
     // 
     const light = searchParams.get("light");
     // 
-    const [firstView, setFirstView] = useState(false);
+    // const [firstView, setFirstView] = useState(false);
     const [timeOutNav, setTimeOutNav] = useState(null);
 
     const handleMapView = (e) => {
@@ -57,13 +55,13 @@ const Nav = ({handleHelixRotate}) => {
         dispatch(setMapState(trigger));
     }
 
-    const handlePersonalView = useCallback(() => {
+    const handlePersonalView = useCallback((clickView) => {
 
         GA('click','nav-hamburger');
 
         let el = refPerson.current;
-        let trigger = (el.className.includes("active-hamburger"));  
-
+        let trigger = clickView && (el.className.includes("active-hamburger"));  
+        
         if (timeOutNav) {
             clearTimeout(timeOutNav);
         }
@@ -79,15 +77,11 @@ const Nav = ({handleHelixRotate}) => {
         }
         else{
             el.classList.add("active-hamburger");
-
-            setFirstView(true);
-            dispatch(setStatus("TRANSITION"));
-                
             navigate("/personal");
             dispatch(setStatus("PERSONAL"));
-        }    
+        }   
         
-    },[timeOutNav])
+    },[timeOutNav, location.pathname])
 
     const handleLogoView = useCallback(() => {
         GA('click','nav-logo');
@@ -129,15 +123,14 @@ const Nav = ({handleHelixRotate}) => {
         document.body.className = className;
     }
 
-    // 
-
+    // Location Path
     useEffect(() => {
-        if(location.pathname.includes("personal") && !firstView){
-            setFirstView(true);
-            handlePersonalView();
+        if(location.pathname.includes("personal")){
+            handlePersonalView(false);
         }
     },[location.pathname])
 
+    // Status
     useEffect(() => {
         switch (three.status) {
             case "INDEX":
@@ -155,6 +148,7 @@ const Nav = ({handleHelixRotate}) => {
         }
     },[three.status])
 
+    // Helix Rotate
     useEffect(() => {
 
         if(!three.helix) return;
@@ -184,7 +178,7 @@ const Nav = ({handleHelixRotate}) => {
             refProgress?.current.removeEventListener("input", handleProgress);
         }
         
-    },[three.helix, three.planeCurrent, three.map])
+    },[three.helix, three.map])
 
     
 
@@ -194,14 +188,17 @@ const Nav = ({handleHelixRotate}) => {
             <a ref={refLogo} className="nav-logo" onClick={() => handleLogoView()}>
                 <img src={imgLogo} alt="" className="w-100%" />
             </a>
+
             {/* Personal */}
-            <a ref={refPerson} className="nav-hamburger" onClick={(e) => handlePersonalView(e)}>
+            <a ref={refPerson} className="nav-hamburger" onClick={(e) => handlePersonalView(true)}>
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
+
             {/* Copyright */}
             <p ref={refCopyright} className="nav-copyright">{`KYM © ${(new Date).getFullYear()} All rights reserved`}</p>
+
             {/* Utility */}
             <div ref={refUtility} className="nav-utility" data-click>
                 <a data-cursor="MAP">
@@ -211,6 +208,7 @@ const Nav = ({handleHelixRotate}) => {
                     <i ref={refLight} id="nav-utility-light" className={`icon-light-${light === "scene-white" ? "off" : "on"}`} onClick={(e) => handleLightView(e)}></i>
                 </a>
             </div>
+
             {/* Date */}
             <div ref={refDate} className='nav-date'>
                 {data.map((items) => {
@@ -227,6 +225,7 @@ const Nav = ({handleHelixRotate}) => {
                     )
                 })}
             </div>
+
             {/* Progress */}
             <div ref={refProgressBlock} className="nav-progress-block">
                 <input ref={refProgress} type="range" id="progress-range" defaultValue="0" step="0.0001" max={dataLength-1} min="0" />

@@ -1,6 +1,6 @@
 // React
-import { Component, Suspense, lazy, useEffect, useLayoutEffect } from 'react';
-import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect, useLayoutEffect } from 'react';
+import { Routes, Route } from "react-router-dom";
 
 // Plugin
 import flashCSS from "html-flash-css";
@@ -16,8 +16,6 @@ import setMouseStyle from "./utils/setMouseStyle";
 
 const App = () => {
 
-  const location = useLocation();
-
   // flashCSS init
   useLayoutEffect(() => {
     const css = new flashCSS({
@@ -25,14 +23,15 @@ const App = () => {
     });
   },[])
 
-  // set Mouse cursor style
+  // Set Mouse Cursor Style
   useEffect(() => {    
     const mouse = setMouseStyle();
-  },[location.pathname])  
+  },[])  
 
   return (
     <>
       <Routes>
+
         {/* THREE.js 主體 */}
         <Route path='/' element={<ThreeScene/>}>
           {/* 個人頁 */}
@@ -40,6 +39,7 @@ const App = () => {
           {/* 作品頁 */}
           <Route path='project/:id' element={<ProjectView/>}></Route>
         </Route>
+        
       </Routes>
     </>
   )

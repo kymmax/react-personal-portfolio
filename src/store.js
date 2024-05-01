@@ -1,4 +1,4 @@
-// React
+// Redux
 import { configureStore } from "@reduxjs/toolkit";
 
 // Slice

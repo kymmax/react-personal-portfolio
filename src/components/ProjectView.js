@@ -1,5 +1,5 @@
 // React
-import { useParams, useSearchParams, useNavigate, useLocation } from "react-router-dom";
+import { useParams, useSearchParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 
@@ -19,23 +19,22 @@ const ProjectView = () => {
 
     if(searchParams?.get('project') === 'false') return;
 
-    const data = useSelector((state) => state.data.data);
     const dispatch = useDispatch();
+    const data = useSelector((state) => state.data.data);
+    const status = useSelector((state) => state.three.status);
 
     const [project, setProject] = useState();
-    const [isActive, setIsActive] = useState(false);
 
+    // Close Project View
     const closeProjectModule = () => {
 
         GA('click','project-close');
         dispatch(setStatus("INDEX"))
        
-        setIsActive(false);
         setTimeout(() => {
             navigate('/');
         }, 1000);
     }
-
 
     // Show Project Content
     useEffect(()=> {
@@ -47,19 +46,13 @@ const ProjectView = () => {
         }, null);
     
         setProject(targetObject);
-        // console.log(targetObject);
         
+        // 產生 scrollbar
         $('.scrollbar-inner').scrollbar();
 
-        // 
+        // Set Status
         dispatch(setStatus("PROJECT"))
 
-        const timeoutId = setTimeout(() => {
-            setIsActive(true);
-        }, 0);
-
-
-        return () => clearTimeout(timeoutId);
     },[])
 
     const createContent = (project) => {
@@ -99,7 +92,7 @@ const ProjectView = () => {
     }
     
     return (
-        <div id="project-module" className={isActive ? 'active' : ''}>
+        <div id="project-module" className={status === 'PROJECT' ? 'active' : ''}>
             
             <a>
                 <i id="project-close" className="icon-close project-close-btn" data-click onClick={() => closeProjectModule()}></i>

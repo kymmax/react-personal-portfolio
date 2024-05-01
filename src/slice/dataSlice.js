@@ -1,4 +1,4 @@
-// React
+// Redux
 import { createSlice } from "@reduxjs/toolkit";
 
 // Data

@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 
 // Plugin THREE.js
-import { Canvas, useThree, useFrame, useLoader } from "@react-three/fiber";
+import { useLoader } from "@react-three/fiber";
 import * as THREE from "three";
 
 // Plugin GSAP

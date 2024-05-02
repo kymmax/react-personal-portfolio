@@ -95,7 +95,7 @@ const Nav = () => {
     },[])
 
     const handleDateView = (e) => {
-
+        
         const currentPlane = e.target.getAttribute('data-current');
 
         dispatch(setStatus("DATE=" + currentPlane));

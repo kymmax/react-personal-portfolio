@@ -1,5 +1,5 @@
 // React
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Outlet, useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -53,7 +53,7 @@ const ThreeScene = () => {
     const [onload, setOnLoad] = useState(false);
     
     // 點擊平面動作
-    const handleClickToPlane = ( number, isProject, duration, status ) => {    
+    const handleClickToPlane = useCallback(( number, isProject, duration, status ) => {    
         
         // 將 map icon off 樣式
         dispatch(setMapState(false));
@@ -65,7 +65,7 @@ const ThreeScene = () => {
         // 計算 當前平面到下個平面的差值
         var rotate = ( (2*Math.PI) / 360 ) * helixPara.theta;
         var numberGap = Math.abs(number - three.planeCurrent);
-        var durationGap = numberGap <= 10 ? 1 : 3; 
+        var durationGap = numberGap <= 10 ? 1 : 3;         
 
         // Set Plane current
         dispatch(setPlaneCurrent(number));
@@ -117,7 +117,7 @@ const ThreeScene = () => {
             }
         })
 
-    }
+    },[three.planeCurrent])
 
     // 轉動整個 Helix Obj
     const handleHelixRotate = function(e, isTouch){
@@ -168,7 +168,7 @@ const ThreeScene = () => {
         setProgressBtn(planeAfter, dataLength);
 
         // Set Plane Current
-        if(planeAfter - three.planeCurrent != 0){
+        if(planeAfter - three.planeCurrent != 0){            
             dispatch(setPlaneCurrent(planeAfter));
         }
     }
@@ -207,7 +207,7 @@ const ThreeScene = () => {
                 })}
             </group>
         );
-    }, []);
+    }, [handleClickToPlane]);
 
     // useEffect =========================
     // Check THREE ONLOAD
@@ -247,7 +247,7 @@ const ThreeScene = () => {
     useEffect(() => {
 
         if (!refScene?.current && !refHelixObj?.current) return;
-
+        
         switch (three.status) {
             case "INIT":
                 // gsap.to(refScene?.current?.position, 1, {
@@ -337,14 +337,14 @@ const ThreeScene = () => {
 
                 break;
             default:
-                // if (three.status.startsWith("DATE")){                    
-                //     const number = three.status.split("=")[1];
-                //     handleClickToPlane(number, false);
-                // }
+                if (three.status.startsWith("DATE")){                    
+                    const number = three.status.split("=")[1];
+                    handleClickToPlane(number, false);
+                }
                 break;
         }
 
-    },[three.status, refScene.current, refHelixObj.current, three.planeCurrent])
+    },[three])
 
     // Mouse Parallax
     useMousePosition(refCamera,({x,y,ref}) => {

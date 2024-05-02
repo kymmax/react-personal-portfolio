@@ -1,22 +1,21 @@
-const paths = require('./paths')
-const glob = require('glob')
+const paths = require('./paths'); // Import paths configuration
+const glob = require('glob'); // Import glob package for file path matching
 
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin') // extract css to files
-const tailwindcss = require('tailwindcss')
-const autoprefixer = require('autoprefixer') // help tailwindcss to work
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // for cleaning build directories
+const CopyWebpackPlugin = require('copy-webpack-plugin'); // for copying files
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // for generating HTML files
+const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // for extracting CSS to files
+// const tailwindcss = require('tailwindcss'); // for styling
+const autoprefixer = require('autoprefixer'); // for adding vendor prefixes to CSS rules
 
-// 
-
+// Function to generate entry points for webpack
 function generateEntries() {
   
   const entry = {};
-  const entryFiles = glob.sync(paths.src + '/pages/**/*.js');
+  const entryFiles = glob.sync(paths.src + '/pages/**/*.js'); // Get all JavaScript files under 'src/pages' directory
 
   entryFiles.forEach(entryFile => {
-    const key = entryFile.replace('.js', '').split('pages/')[1];
+    const key = entryFile.replace('.js', '').split('pages/')[1]; // Generate entry key from file path
     entry[key] = entryFile;
   });
 
@@ -25,20 +24,19 @@ function generateEntries() {
 
 let entries = generateEntries();
 
-// 
-
+// Function to generate HtmlWebpackPlugin instances for each entry
 function generateHtmlWebpackPlugin(){
 
   let html = [];
   Object.keys(entries).forEach(function (pathname) {
     var conf = {
-      template: paths.public + '/' + pathname + '.html',
-      filename: pathname + '.html',
-      // inject: true,
-      // minify: false
+      template: paths.public + '/' + pathname + '.html', // Specify template HTML file
+      filename: pathname + '.html', // Specify output HTML file name
+      // inject: true,  // Auto-inject scripts into HTML
+      // minify: false  // Disable HTML minification
     };
     if (pathname in entries) {
-      conf.chunks = [pathname];
+      conf.chunks = [pathname];  // Specify which chunks to include in the HTML file
     }
     html.push(new HtmlWebpackPlugin(conf));
   });
@@ -59,9 +57,10 @@ module.exports = {
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
 
+    // Extracts CSS to separate files
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css',
-      chunkFilename: 'styles/[id].[contenthash].css',
+      filename: 'styles/[name].[contenthash].css',  // Specify output file name for CSS
+      chunkFilename: 'styles/[id].[contenthash].css',  // Specify output file name for CSS chunks
     }),
 
     // Copies files from target to destination folder
@@ -93,23 +92,24 @@ module.exports = {
         test: /\.(css|scss|sass)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          'css-loader',  // Resolve @import and url() paths
           {
             loader: 'postcss-loader', // postcss loader needed for tailwindcss
             options: {
               postcssOptions: {
                 ident: 'postcss',
                 plugins: [
-                  tailwindcss, 
+                  // tailwindcss, 
                   autoprefixer
                 ],
               },
             },
           },
-          'sass-loader',
+          'sass-loader',  // Compile SASS to CSS
         ],
       },
 
+      // SVG files: Use @svgr/webpack to handle SVG as React components
       {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
@@ -119,7 +119,7 @@ module.exports = {
       { test: /\.(?:ico|gif|png|jpg|jpeg|hdr)$/i, type: 'asset/resource' },
 
       // Fonts and SVGs: Inline files
-      { test: /\.(woff(2)?|eot|ttf|otf|)$/, type: 'asset/inline' },
+      // { test: /\.(woff(2)?|eot|ttf|otf|)$/, type: 'asset/inline' },
     ],
   },
 }

@@ -1,8 +1,8 @@
-const paths = require('./paths')
-const Dotenv = require('dotenv-webpack')
-const { merge } = require('webpack-merge')
-const common = require('./webpack.common.js')
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const paths = require('./paths'); // Import paths configuration
+const Dotenv = require('dotenv-webpack'); //for loading environment variables
+const { merge } = require('webpack-merge'); // for merging configurations
+const common = require('./webpack.common.js'); // Import common configuration
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'); // for hot module replacement
 
 module.exports = merge(common, {
   // Set the mode to development or production
@@ -20,22 +20,24 @@ module.exports = merge(common, {
 
   // Spin up a server for quick development
   devServer: {
-    historyApiFallback: true,
-    contentBase: paths.build,
-    open: true,
-    compress: true,
-    hot: true,
-    port: 3000,
+    historyApiFallback: true, // Allow HTML5 History API fallback
+    contentBase: paths.build, // Specify the directory to serve static files from
+    open: true, // Open the default browser when server starts
+    compress: true, // Enable gzip compression
+    hot: true, // Enable hot module replacement
+    port: 3000, // Specify port number
   },
 
+  // Plugins for webpack build process
   plugins: [
     new Dotenv({
       path: './.env.development',
     }),
     // new webpack.HotModuleReplacementPlugin(),
-    new ReactRefreshWebpackPlugin(),
+    new ReactRefreshWebpackPlugin(), // Enable React Refresh for fast development
   ].filter(Boolean),
 
+  // Module rules for handling different file types
   module: {
     rules: [
       // ... other rules
@@ -45,7 +47,7 @@ module.exports = merge(common, {
         use: [
           // ... other loaders
           {
-            loader: require.resolve('babel-loader'),
+            loader: require.resolve('babel-loader'), // Use babel-loader for transpiling JavaScript
             options: {
               // ... other options
               plugins: [

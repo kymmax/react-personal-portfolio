@@ -47,6 +47,7 @@ a{
 // 
 html,
 body {
+    background: black;
     height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
 }
